@@ -1,0 +1,11 @@
+{
+  "data": [
+    {
+      "name": "服饰",
+      "item": [
+        {"imgURL": "http://127.0.0.1:3000/images/home/s1.jpg","detail": "女装"},
+        {"imgURL": "","title": "女装"}
+      ]
+    }
+  ]
+}

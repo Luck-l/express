@@ -1,0 +1,21 @@
+{
+  "good_list": [{
+    "goods_id": 2459375892,
+    "goods_name": "复衣城 套装女夏款韩版大妈",
+    "short_name": "复衣城 套装女夏款韩版大妈",
+    "image_url": "http://t00img.yangkeduo.com/goods/images/sfsf.jpg",
+    "thumb_url": "http://t00img.yangkeduo.com/goods/images/sfsf.jpg",
+    "hd_thumb_url": "http://t00img.yangkeduo.com/goods/images/sfsf.jpg",
+    "is_app": 0,
+    "event_type": 0,
+    "group": {
+      "price": 5500,
+      "customer_num": 2
+    },
+    "cnt": 14099,
+    "market_price": 70900,
+    "normal_price": 6900,
+    "country": "",
+    "allowed region": "[2,3,4,5,6,7,8,9,10]"
+  }]
+}

@@ -32,7 +32,6 @@ router.get("/api/loginverify",(req,res) =>{
 })
 //短信登陆
 router.post("/api/login_code",(req,res) =>{
-
   const phone = req.body.phone;
   let sqlStr = "SELECT * FROM login_user WHERE user_phone = '"+phone+"' LIMIT 1";
   conn.query(sqlStr,(error,results,fields) =>{
@@ -164,6 +163,7 @@ router.get("/api/homeswiper",(req,res) =>{
   let sqlStr = "SELECT * FROM homeswiper";
   conn.query(sqlStr,(error,results,fields) =>{
     //测试
+    // console.log("111")
     // if(error) throw error
     if(error){
       res.json({err_code:0,message:"请求数据失败"})

@@ -29,24 +29,32 @@ server.use(session(({
 })))
 
 //跨域问题
-server.all("*",function (req, res, next) {
-    if(!req.get("Origin")) return next()
-  res.set("Access-Control-Allow-Origin","*")
-  res.set("Access-Control-Allow-Methods","GET")
-  // res.set(,"POST")
-  res.set("Access-Control-Allow-Headers","X-Requested-With,Content-Type","application/x-www-form-urlencoded")
-  if("OPTIONS" === req.method) return res.sendStatus(200)
-  next()
-})
+// server.all("*",function (req, res, next) {
+//     if(!req.get("Origin")) return next()
+//   res.set("Access-Control-Allow-Origin","*")
+//   res.set("Access-Control-Allow-Methods","GET")
+//   // res.set(,"POST")
+//   res.set("Access-Control-Allow-Headers","X-Requested-With,Content-Type","application/x-www-form-urlencoded")
+//   if("OPTIONS" === req.method) return res.sendStatus(200)
+//   next()
+// })
+// server.all('*', function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,params");
+//   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+//   res.header("X-Powered-By",' 3.2.1')
+//   res.header("Content-Type", "application/json;charset=utf-8");
+//   next();
+// });
 server.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin,X-Requested-With,Content-Type,Accept,params");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
   res.header("X-Powered-By",' 3.2.1')
   res.header("Content-Type", "application/json;charset=utf-8");
   next();
 });
-
 
 
 
